@@ -1,11 +1,5 @@
 @CHARSET "UTF-8";
 
-/*
-* {
-	border: 1px solid red;
-}
-*/
-
 a {
 	text-decoration: none;
 }
@@ -14,15 +8,24 @@ a img {
 	border-style: none;
 }
 
-.onright {
-	float: right;
+[data-valign] {
+	border: 5px dashed red;
+	border: 10px dashed rgba(255,0,0,0.2);
+	padding: 5px;
 }
 
-.onleft {
+.valign-wrapper {
+	position: relative;
+	height: 15em;
+	border: 1px solid blue;
+	margin: 5px;
+}
+
+.shrinkwrap {
 	float: left;
 }
 
-.centred {
-	width: 100%;
-	text-align: center;
+/* Prevent FOUC */
+html.js [data-valign] {
+	visibility: hidden;
 }
